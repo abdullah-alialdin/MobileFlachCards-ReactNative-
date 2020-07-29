@@ -1,21 +1,47 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import "react-native-gesture-handler";
+import React, { Component } from "react";
+import { View, StatusBar } from "react-native";
+import { createStore } from "redux";
+import { Provider } from "react-redux";
+import reducer from "./reducers";
+import { NavigationContainer } from "@react-navigation/native";
+import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
+import { createStackNavigator } from "@react-navigation/stack";
+import Constants from "expo-constants";
+import { purple } from "./utils/colors";
+import Navigator from "./components/Navigator";
+import { setLocalNotification } from "./utils/Notifications";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+function SatatusBar({ backgroundColor, ...props }) {
+    return (
+        <View style={{ backgroundColor, height: Constants.statusBarHeight }}>
+            <StatusBar
+                transculant
+                backgroundColor={backgroundColor}
+                {...props}
+            />
+        </View>
+    );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default class App extends Component {
+    componentDidMount() {
+        setLocalNotification();
+    }
+
+    render() {
+        return (
+            <Provider store={createStore(reducer)}>
+                <View style={{ flex: 1 }}>
+                    <SatatusBar
+                        backgroundColor={purple}
+                        barStyle="light-content"
+                    />
+                    <NavigationContainer>
+                        <Navigator />
+                    </NavigationContainer>
+                </View>
+            </Provider>
+        );
+    }
+}
