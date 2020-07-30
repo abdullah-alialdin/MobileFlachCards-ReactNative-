@@ -13,7 +13,6 @@ import {
     purple,
     blue,
     white,
-    yellow,
     hoki,
 } from "../utils/colors";
 

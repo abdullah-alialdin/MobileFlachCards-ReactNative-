@@ -9,12 +9,9 @@ import {
 import { connect } from "react-redux";
 import {
     purple,
-    orange,
     white,
-    yellow,
     blue,
     red,
-    pink,
 } from "../utils/colors";
 import { deleteDeck } from "../actions";
 import { removeDeck } from "../utils/api";
@@ -131,7 +128,6 @@ const styles = StyleSheet.create({
     },
     badge: {
         backgroundColor: purple,
-        color: white,
         height: 22,
         width: 22,
         borderRadius: 50,

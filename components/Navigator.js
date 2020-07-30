@@ -3,7 +3,6 @@ import React, { Component } from "react";
 import { View } from "react-native";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 import { createStackNavigator } from "@react-navigation/stack";
-import { purple } from "../utils/colors";
 import Decks from "./Decks";
 import NewDeck from "./NewDeck";
 import DeckDetails from "./DeckDetails";

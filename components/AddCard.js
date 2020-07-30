@@ -11,7 +11,6 @@ import {
 	purple,
 	blue,
 	white,
-	yellow,
 	red,
 	hoki,
 	pink,

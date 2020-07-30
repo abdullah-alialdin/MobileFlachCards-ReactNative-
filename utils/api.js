@@ -42,12 +42,12 @@ export async function createDeck(newDeckEntry) {
     return;
 }
 
-export async function createNewCard(deckId, question) {
+export async function createNewCard(deckId, card) {
     await AsyncStorage.getItem(APP_KEY).then((results) => {
         const data = JSON.parse(results);
         data[deckId] = {
             ...data[deckId],
-            cards: [...data[deckId].cards, question],
+            cards: [...data[deckId].cards, card],
         };
         AsyncStorage.setItem(APP_KEY, JSON.stringify(data));
     });

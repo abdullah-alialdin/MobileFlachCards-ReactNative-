@@ -12,7 +12,6 @@ import { getAllDecks } from "../utils/api";
 import {
     purple,
     blue,
-    yellow,
 } from "../utils/colors";
 
 class Decks extends Component {

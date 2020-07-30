@@ -11,7 +11,6 @@ import {
     purple,
     blue,
     white,
-    yellow,
     red,
     green,
 } from "../utils/colors";
@@ -230,8 +229,6 @@ class Quiz extends Component {
 const styles = StyleSheet.create({
     quizContainer: {
         flex: 1,
-        backgroundColor: yellow,
-        borderRadius: 5,
         padding: 5,
         margin: 10,
         alignSelf: "center",
