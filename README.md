@@ -1,5 +1,14 @@
 This project is a part of React NanoDegree from Udacity.
 
+###Clone project
+You can clone project from https://github.com/abdullah-alialdin/MobileFlachCards-ReactNative-.git
+
+###Install project
+Using `npm install`
+
+###Start project
+Using `npm start`
+
 ### development
 This app was tested and developed on an emulator for Android on a Windows machine.
 
